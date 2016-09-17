@@ -1,0 +1,48 @@
+// Mongo Notes 
+
+<!--Terms To Know-->
+
+Database = Database
+
+Collection = Table
+
+Document = Row/Record
+
+
+USE <!--Add Database Name - creates your database if it doesn't exist--> 
+
+<!--Example-->
+
+db <!--Shows current database-->
+
+
+USE Sports
+
+<!--Mongo will create a database with the name of sports if it does not exist-->
+
+db.createCollection(''); <!--Add Collection Name in between the quotes" - This creates a collection-->
+
+<!--In order to access sports you can do the following-->
+
+show collections <!--Shows different collections inside of the database-->
+
+db.find() <!--Finds the record-->
+
+db.insert({name: "value"}); 
+
+<!--Updates collection where the name is value and adds a person document with a value of todd-->
+db.update({name: "value"}, {$set: {person: 'todd'}}); 
+
+<!--This removes the collection-->
+
+db.collection.drop()
+
+<!--This removes the database-->
+
+db.dropDatabase()
+
+<!--This removes all of the data or the ID -->
+db.collection.remove({})
+
+
+
